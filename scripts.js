@@ -24,7 +24,7 @@ function flipCard() {
 }
 
 function checkForMatch() {
-    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+    let isMatch = firstCard.dataset.person === secondCard.dataset.person;
    
     isMatch ? disableCards() : unflipCards();
 }
@@ -42,7 +42,7 @@ function unflipCards() {
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-        
+
         resetBoard();
     }, 1500);
 }
